@@ -1,114 +1,83 @@
 # Detecção de Parkinson a partir de Desenhos de Espirais – Deep Learning 🧠✏️
 
 [![TensorFlow 2.15+](https://img.shields.io/badge/TensorFlow-2.15%2B-FF6F00?logo=tensorflow&logoColor=white)](https://www.tensorflow.org/)  
-[![Licença MIT](https://img.shields.io/badge/Licença-MIT-green.svg)](#licença)  
-![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
+[![Python 3.9+](https://img.shields.io/badge/Python-3.9%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/downloads/)  
+[![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)]  
+[![Licença MIT](https://img.shields.io/badge/Licença-MIT-green.svg)](#licença)
 
-Projeto de *deep learning* que classifica indivíduos com Doença de Parkinson a partir de imagens de espirais desenhadas à mão. Comparamos três arquiteturas de CNN (DenseNet-121, ResNet-50 e VGG-16) sob dois fluxos de pré-processamento (padding × resizing) e preparamos o terreno para um ensemble de modelos.
+<p align="center">
+  <img src="docs/spiral_example.png" alt="Exemplo de Espiral" width="300"/>
+</p>
+
+> Projeto de **deep learning** que detecta sinais de Parkinson a partir de desenhos de espirais feitos à mão, comparando três arquiteturas de CNN e dois fluxos de pré-processamento.
 
 ---
 
-## Índice
+## 📋 Sumário
 
-1. [Visão geral](#visão-geral)  
+1. [Visão Geral](#visão-geral)  
 2. [Dataset](#dataset)  
-3. [Estrutura do repositório](#estrutura-do-repositório)  
-4. [Requisitos](#requisitos)  
-5. [Instalação](#instalação)  
-6. [Como executar](#como-executar)  
-7. [Resultados](#resultados)  
-8. [Próximos passos](#próximos-passos)  
-9. [Contribua](#contribua)  
-10. [Licença](#licença)  
-11. [Agradecimentos](#agradecimentos)  
+3. [Como Executar (Colab)](#como-executar-colab)  
+4. [Resultados](#resultados)  
+5. [Próximos Passos](#próximos-passos)  
+6. [Contribuições](#contribuições)  
+7. [Autores](#autores)  
+8. [Licença](#licença)  
 
 ---
 
-## Visão geral
+## 🔎 Visão Geral
 
-A escrita e o desenho de espirais apresentam alterações motoras características em pacientes com Parkinson.  
-Este projeto utiliza redes neurais convolucionais para automatizar a detecção dessas alterações em imagens, auxiliando pesquisas clínicas e triagem precoce.
-
-**Principais pontos:**
-
-- **Fluxos de pré-processamento**  
+- **Objetivo**: automatizar a triagem precoce de Parkinson a partir do padrão motor em desenhos.  
+- **Modelos**: DenseNet-121, ResNet-50 e VGG-16 (pesos ImageNet).  
+- **Pré-processamento**:  
   - **Padding** (manter proporção original)  
   - **Resizing** (normalizar tamanho)  
-- **Data augmentation**: rotações, flips e zoom para robustez  
-- **Modelos testados**:  
-  - DenseNet-121 (pesos ImageNet)  
-  - ResNet-50 (pesos ImageNet)  
-  - VGG-16 (pesos ImageNet)  
-- **Métricas de avaliação**: acurácia, precisão, recall, F1-score e matriz de confusão  
-- Exportação dos pesos treinados em arquivos `.h5`
+- **Data Augmentation**: rotações, flips e zoom.  
+- **Métricas**: acurácia, precisão, recall, F1-score e matriz de confusão.  
 
 ---
 
-## Dataset
+## 🗃️ Dataset
 
-| Fonte            | Kaggle – `kmader/parkinsons-drawings`                         |
-|------------------|----------------------------------------------------------------|
-| Imagens          | 1.693 PNGs de espirais (aprox. 50 × 50 mm)                     |
-| Classes          | `healthy` (controle) / `parkinson`                             |
-| Licença          | Creative Commons Attribution-ShareAlike 4.0                    |
+| Propriedade      | Detalhes                                      |
+|------------------|-----------------------------------------------|
+| **Fonte**        | Kaggle – `kmader/parkinsons-drawings`         |
+| **Imagens**      | 1.693 PNGs de espirais (≈ 50 × 50 mm)           |
+| **Classes**      | `healthy` (controle) / `parkinson`            |
+| **Licença**      | Creative Commons Attribution-ShareAlike 4.0   |
 
-O download é feito via Kaggle API direto no notebook `Projeto_DL_Parkinson.ipynb`.
+> O download é feito automaticamente via Kaggle API no notebook principal.
 
 ---
 
-## Requisitos
+## 🚀 Como Executar (Colab)
 
-- **Python 3.9+**  
-- **TensorFlow 2.15+**  
-- Bibliotecas Python:  
-  - `numpy`  
-  - `pandas`  
-  - `matplotlib`  
-  - `scikit-learn`  
-  - `opencv-python`  
-- **Kaggle CLI** (para download automático do dataset)
+1. **Abra no Colab**  
+   👉 https://colab.research.google.com/github/seu-usuario/parkinson-dl/blob/main/Projeto_DL_Parkinson.ipynb  
 
-Instalação rápida:
+2. **Instale dependências**  
+   ```python
+   !pip install -r requirements.txt
 
-```bash
-pip install -r requirements.txt
+	3.	Configure credenciais Kaggle
+	•	No painel lateral, faça upload de kaggle.json.
+	•	Em seguida:
+
+!mkdir -p ~/.kaggle
+!mv kaggle.json ~/.kaggle/
+!chmod 600 ~/.kaggle/kaggle.json
 
 
-⸻
-
-Instalação
-
-# 1. Clone o repositório
-git clone https://github.com/<seu-usuario>/parkinson-dl.git
-cd parkinson-dl
-
-# 2. Configure suas credenciais do Kaggle
-#    Coloque o arquivo kaggle.json em ~/.kaggle/
-
-# 3. (Opcional) Crie e ative um ambiente virtual
-python -m venv .venv
-source .venv/bin/activate
-
-# 4. Instale dependências
-pip install -r requirements.txt
-
+	4.	Execute todas as células
+	•	Download do dataset
+	•	Pré-processamento
+	•	Treinamento
+	•	Avaliação e geração de relatórios
 
 ⸻
 
-Como executar
-
-1. Notebook (recomendado)
-
-Abra Projeto_DL_Parkinson.ipynb no Jupyter ou Google Colab e execute as células em ordem.
-O download do dataset, treinamento e avaliação são totalmente automatizados.
-
-2. Script (em desenvolvimento)
-
-Um script train.py será disponibilizado em src/ para execução sem interface gráfica.
-
-⸻
-
-Resultados
+📊 Resultados
 
 Modelo / Pré-proc.	Acurácia	Precisão (P / NP)	Recall (P / NP)	F1-score (P / NP)
 DenseNet-121 / Padding	0,92	0,90 / 0,93	0,93 / 0,90	0,92 / 0,92
@@ -118,30 +87,32 @@ ResNet-50 / Resizing	0,60	1,00 / 0,56	0,20 / 1,00	0,33 / 0,71
 VGG-16 / Padding	0,85	0,86 / 0,84	0,83 / 0,87	0,85 / 0,85
 VGG-16 / Resizing	0,87	0,89 / 0,84	0,83 / 0,90	0,86 / 0,87
 
-Melhor resultado: DenseNet-121 com padding (acurácia de 92 %).
+Melhor: DenseNet-121 + Padding (92 % de acurácia).
 
 ⸻
 
-Próximos passos
-	•	Treinar ensemble ponderado das três arquiteturas
+🛠️ Próximos Passos
+	•	Criar ensemble ponderado das três arquiteturas
 	•	Testar EfficientNet (B0–B4) e Vision Transformers
 	•	Implementar Grad-CAM para interpretação de predições
-	•	Converter o modelo para TensorFlow Lite e avaliar em dispositivos móveis
+	•	Converter para TensorFlow Lite e avaliar em dispositivos móveis
 
 ⸻
 
-Licença
-
-Este projeto está licenciado sob a MIT License.
-Veja o arquivo LICENSE para mais detalhes.
-
-⸻
-
-Agradecimentos
-	•	Kmader e colaboradores pelo dataset parkinsons-drawings no Kaggle
-	•	Comunidade TensorFlow e Keras
-	•	Discussões e insights da Campus Party 2024
+👥 Autores
+	•	Matias - Gabriel-Wamat
+	•	Rafael Barbosa – RafaelB411
 
 ⸻
 
+📄 Licença
+
+Este projeto está licenciado sob a MIT License. Veja o arquivo LICENSE para detalhes.
+
+⸻
+
+
+<div align="center">
+  <sub>Feito com ❤️ e muito café por <a href="https://github.com/seu-usuario">Seu Nome</a> e <a href="https://github.com/RafaelB411">RafaelB411</a>.</sub>
+</div>
 ```
