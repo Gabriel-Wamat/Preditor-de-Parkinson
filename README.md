@@ -56,32 +56,6 @@ O download é feito via Kaggle API direto no notebook `Projeto_DL_Parkinson.ipyn
 
 ---
 
-## Estrutura do repositório
-
-.
-├── notebooks/                      # Notebooks Jupyter
-│   └── Projeto_DL_Parkinson.ipynb
-├── data/                           # Dados brutos e processados
-│   ├── raw/                        # └── Imagens originais
-│   └── processed/                  # └── Imagens pré-processadas
-├── src/                            # Código-fonte
-│   ├── data_preprocessing/         # Scripts de pré-processamento
-│   │   └── preprocess.py
-│   ├── models/                     # Treinamento de modelos
-│   │   └── train.py
-│   └── evaluation/                 # Avaliação e métricas
-│       └── evaluate.py
-├── models/                         # Pesos treinados (*.h5)
-├── results/                        # Gráficos, relatórios e matrizes de confusão
-├── .github/                        # Workflows de CI, templates de ISSUE/PR
-│   └── workflows/
-│       └── python-app.yml
-├── requirements.txt                # Dependências Python
-├── .gitignore                      # Arquivos/pastas ignorados pelo Git
-└── README.md                       # Documentação do projeto
-
----
-
 ## Requisitos
 
 - **Python 3.9+**  
