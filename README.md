@@ -147,19 +147,6 @@ Próximos passos
 
 ⸻
 
-Contribua
-
-Contribuições são muito bem-vindas!
-	1.	Faça um fork deste repositório
-	2.	Crie uma branch para sua feature (git checkout -b feature/nome-da-feature)
-	3.	Commit suas alterações (git commit -m "Adiciona nova feature")
-	4.	Push para sua branch (git push origin feature/nome-da-feature)
-	5.	Abra um pull request
-
-Veja também issues para ideias e bugs abertos.
-
-⸻
-
 Licença
 
 Este projeto está licenciado sob a MIT License.
@@ -170,12 +157,8 @@ Veja o arquivo LICENSE para mais detalhes.
 Agradecimentos
 	•	Kmader e colaboradores pelo dataset parkinsons-drawings no Kaggle
 	•	Comunidade TensorFlow e Keras
-	•	Discussões e insights da Campus Party 2025
+	•	Discussões e insights da Campus Party 2024
 
 ⸻
 
-
-<div align="center">  
-Feito com ❤️ e muito café por [Seu Nome](https://github.com/<seu-usuario>)  
-</div>
 ```
