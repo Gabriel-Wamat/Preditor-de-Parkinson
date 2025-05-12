@@ -50,7 +50,7 @@
 ## 🚀 Como Executar (Colab)
 
 1. **Abra no Colab**  
-   👉 https://colab.research.google.com/github/seu-usuario/parkinson-dl/blob/main/Projeto_DL_Parkinson.ipynb  
+   👉 https://colab.research.google.com/
 
 2. **Instale dependências**  
    ```python
@@ -92,9 +92,9 @@
 	•	Criar ensemble ponderado das três arquiteturas
 	•	Testar EfficientNet (B0–B4) e Vision Transformers
 	•	Implementar Grad-CAM para interpretação de predições
-	•	Converter para TensorFlow Lite e avaliar em dispositivos móveis
-
-
+        •       Desenvolvermos um dataset específico para mobile
+	•       Converter para TensorFlow Lite e avaliar em dispositivos móveis(iPad)		
+ 
 
 
 <div align="center">
