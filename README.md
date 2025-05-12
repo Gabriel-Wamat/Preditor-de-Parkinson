@@ -74,16 +74,28 @@
 
 ## 📊 Resultados
 
-| Modelo / Pré-processamento    | Métricas                                                                                                         |
-|-------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| DenseNet-121 / Padding        | Acurácia: 0,92 • Precisão (P/NP): 0,90 / 0,93 • Recall (P/NP): 0,93 / 0,90 • F1-score (P/NP): 0,92 / 0,92          |
-| DenseNet-121 / Resizing       | Acurácia: 0,85 • Precisão (P/NP): 0,78 / 0,96 • Recall (P/NP): 0,97 / 0,73 • F1-score (P/NP): 0,87 / 0,83          |
-| ResNet-50 / Padding           | Acurácia: 0,67 • Precisão (P/NP): 0,81 / 0,61 • Recall (P/NP): 0,43 / 0,90 • F1-score (P/NP): 0,57 / 0,73          |
-| ResNet-50 / Resizing          | Acurácia: 0,60 • Precisão (P/NP): 1,00 / 0,56 • Recall (P/NP): 0,20 / 1,00 • F1-score (P/NP): 0,33 / 0,71          |
-| VGG-16 / Padding              | Acurácia: 0,85 • Precisão (P/NP): 0,86 / 0,84 • Recall (P/NP): 0,83 / 0,87 • F1-score (P/NP): 0,85 / 0,85          |
-| VGG-16 / Resizing             | Acurácia: 0,87 • Precisão (P/NP): 0,89 / 0,84 • Recall (P/NP): 0,83 / 0,90 • F1-score (P/NP): 0,86 / 0,87          |
+### 📌 DenseNet-121
 
-**Melhor resultado:** DenseNet-121 + Padding (acurácia de 92 %).
+| Pré-processamento | Acurácia | Precisão (P / NP) | Recall (P / NP) | F1-score (P / NP) |
+|-------------------|----------|-------------------|------------------|-------------------|
+| Padding           | 0,92     | 0,90 / 0,93       | 0,93 / 0,90      | 0,92 / 0,92       |
+| Resizing          | 0,85     | 0,78 / 0,96       | 0,97 / 0,73      | 0,87 / 0,83       |
+
+### 📌 ResNet-50
+
+| Pré-processamento | Acurácia | Precisão (P / NP) | Recall (P / NP) | F1-score (P / NP) |
+|-------------------|----------|-------------------|------------------|-------------------|
+| Padding           | 0,67     | 0,81 / 0,61       | 0,43 / 0,90      | 0,57 / 0,73       |
+| Resizing          | 0,60     | 1,00 / 0,56       | 0,20 / 1,00      | 0,33 / 0,71       |
+
+### 📌 VGG-16
+
+| Pré-processamento | Acurácia | Precisão (P / NP) | Recall (P / NP) | F1-score (P / NP) |
+|-------------------|----------|-------------------|------------------|-------------------|
+| Padding           | 0,85     | 0,86 / 0,84       | 0,83 / 0,87      | 0,85 / 0,85       |
+| Resizing          | 0,87     | 0,89 / 0,84       | 0,83 / 0,90      | 0,86 / 0,87       |
+
+**🏆 Melhor resultado:** DenseNet-121 + Padding (acurácia de 92 %)
 
 ⸻
 
