@@ -16,9 +16,8 @@
 3. [Como Executar (Colab)](#como-executar-colab)  
 4. [Resultados](#resultados)  
 5. [Próximos Passos](#próximos-passos)  
-6. [Contribuições](#contribuições)  
-7. [Autores](#autores)  
-8. [Licença](#licença)  
+6. [Autores](#autores)
+
 
 ---
 
