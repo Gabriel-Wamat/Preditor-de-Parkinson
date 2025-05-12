@@ -1,4 +1,3 @@
-# CAMPUS PARTY - EDITION
 
 ## Descrição do Projeto
 
