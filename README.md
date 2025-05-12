@@ -87,12 +87,13 @@
 
 ⸻
 
-🛠️ Próximos Passos
-	•	Criar ensemble ponderado das três arquiteturas
-	•	Testar EfficientNet (B0–B4) e Vision Transformers
-	•	Implementar Grad-CAM para interpretação de predições
-        •       Desenvolvermos um dataset específico para mobile
-	•       Converter para TensorFlow Lite e avaliar em dispositivos móveis(iPad)		
+## 🛠️ Próximos Passos
+
+- Criar ensemble ponderado das três arquiteturas  
+- Testar EfficientNet (B0–B4) e Vision Transformers  
+- Implementar Grad-CAM para interpretação de predições  
+- Desenvolver um dataset específico para mobile  
+- Converter para TensorFlow Lite e avaliar em dispositivos móveis (iPad/Tablet)  	
  
 
 
