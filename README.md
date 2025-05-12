@@ -2,7 +2,6 @@
 
 [![TensorFlow 2.15+](https://img.shields.io/badge/TensorFlow-2.15%2B-FF6F00?logo=tensorflow&logoColor=white)](https://www.tensorflow.org/)  
 [![Python 3.9+](https://img.shields.io/badge/Python-3.9%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/downloads/)  
-[![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)]  
 [![Licença MIT](https://img.shields.io/badge/Licença-MIT-green.svg)](#licença)
 
 
