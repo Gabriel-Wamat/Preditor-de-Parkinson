@@ -99,7 +99,7 @@
 
 ⸻
 
-## 🛠️ Próximos Passos
+## 🛠️ Próximos Passos em desenvolvimento
 
 - Criar ensemble ponderado das três arquiteturas  
 - Testar EfficientNet (B0–B4) e Vision Transformers  
